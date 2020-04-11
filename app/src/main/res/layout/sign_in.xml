@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in"
+            android:textAppearance="?attr/textAppearanceHeadline4"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/email_hint"
+            android:layout_marginTop="80dp"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:id="@+id/email"
+            android:textAppearance="?attr/textAppearanceHeadline6"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:inputType="textPassword"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:hint="@string/pass_hint"
+            android:id="@+id/pass"
+            android:textAppearance="?attr/textAppearanceHeadline6"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/log_in"
+            android:onClick="onLogIn"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:textAppearance="?attr/textAppearanceHeadline5"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_horizontal_margin"
+            android:textColor="@color/colorBlack"
+            android:text="@string/frgt_pass"
+            android:onClick="onForgotPass"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="80dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dnt_hv_account"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_marginTop="5dp"
+            android:text="@string/clk_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onSignUp"
+            android:textAppearance="?attr/textAppearanceSubtitle1"/>
+    </LinearLayout>
+
+</layout>

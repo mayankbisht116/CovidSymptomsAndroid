@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="bindFragmentHistoryDetails"
+            type="com.covid.ui.history.HistoryDetailsFragment" />
+
+    </data>
+
+
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorSilver">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarHistoryDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:minHeight="?attr/actionBarSize">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/history"
+            android:textColor="@color/colorWhite"
+            android:layout_centerInParent="true"
+            android:textAppearance="?attr/textAppearanceHeadline4"/>
+
+        </RelativeLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_HistoryDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:text=""
+        tools:text="ASDJDGKDJGKDJG"
+        android:textSize="30sp" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/tv_HistoryDetailsTitle"
+        android:id="@+id/upper_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="3dp"
+        android:background="@color/colorSilver"
+        app:cardUseCompatPadding="true">
+        <LinearLayout
+            android:padding="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:text="Date"
+                android:textAppearance="?attr/textAppearanceHeadline6">
+            </TextView>
+            <TextView
+                android:id="@+id/set_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Month date year"
+                android:gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:textAppearance="?attr/textAppearanceSubtitle1">
+            </TextView>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/tvTimeHeading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:textAppearance="?attr/textAppearanceHeadline6"
+                android:text="Time">
+            </TextView>
+
+            <TextView
+                android:id="@+id/settime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:hint="HH:MM:AM"
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:textAppearance="?attr/textAppearanceSubtitle1">
+            </TextView>
+        </RelativeLayout>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <RelativeLayout
+        android:id="@+id/middle"
+        android:layout_below="@id/upper_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HOW YOU WERE FEELING?"
+            android:layout_marginLeft="10dp"
+            android:textAppearance="?attr/textAppearanceHeadline6">
+        </TextView>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/checkfeltWell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="I felt well"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceBody1"/>
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:layout_below="@id/checkfeltWell"
+            android:id="@+id/checkfeltUnwell"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="I wasn't feeling right"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceBody1"/>
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/middle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="8dp"
+        app:cardUseCompatPadding="true">
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:id="@+id/tvwasexhibiting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            tools:text="asasasas"
+            android:gravity="center_vertical"
+            android:textAppearance="?attr/textAppearanceBody1">
+
+        </TextView>
+
+        <ListView
+            android:id="@+id/listViewQuestionsAnswered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ListView>
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
+
+
+</LinearLayout>
+</layout>

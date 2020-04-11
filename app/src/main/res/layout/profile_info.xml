@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--    <variable name="frag" type="com.covid.ui.profile.ProfileFragment" />-->
+    <data>
+        <variable name="info_frag" type="com.covid.ui.profile.ProfileInfoFragment" />
+        <variable name="selected" type="String" />
+    </data>
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+<RelativeLayout
+    android:layout_centerVertical="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="@string/what_country"
+            android:gravity="center"
+            android:textAppearance="?attr/textAppearanceHeadline3"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_below="@id/title"
+            android:id="@+id/input"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@{selected}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?attr/textAppearanceHeadline4"/>
+
+        <LinearLayout
+            android:layout_below="@id/input"
+            android:id="@+id/gndr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/male"
+                android:padding="2dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:srcCompat="@drawable/ic_male"
+                android:onClick="@{(v)->info_frag.onMaleClicked()}"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:padding="2dp"
+                android:id="@+id/female"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="40dp"
+                app:srcCompat="@drawable/ic_female"
+                android:onClick="@{(v)->info_frag.onFemaleClicked()}"/>
+        </LinearLayout>
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal"-->
+<!--            android:onClick="@{(v)->info_frag.onDoneClicked()}"-->
+<!--            android:text="@string/done"/>-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:padding="20dp"
+            android:layout_below="@id/input"
+            android:id="@+id/cuntry_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</RelativeLayout>
+    </RelativeLayout>
+</layout>
